@@ -1,6 +1,6 @@
 # act_a1_docker
 
-### *前提：GPU驱动已经安装好*
+### *前提：GPU驱动已经安装,程序代码已经下载*
 
 1、没有安装nvidia-docker的，先参考下边的链接内容安装  
 - [install nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
