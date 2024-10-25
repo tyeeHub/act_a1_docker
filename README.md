@@ -1,4 +1,7 @@
-#前提：GPU驱动已经安装好
+# act_a1_docker
+
+### 前提：GPU驱动已经安装好
+
 1、没有安装nvidia-docker的，先参考下边的链接内容安装
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 2、允许本地用户访问当前X服务器
