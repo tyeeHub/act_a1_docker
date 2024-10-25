@@ -13,13 +13,17 @@ xhost +local:
 
 4、在act_galaxea_a1目录下运行星海图机械臂A1环境
 ```shell
+
 # 启动机械臂环境
 docker-compose up -d
-#进入act_a1虚拟环境
-conda activate a1
+
 #bash进入容器
 docker-compose exec sl_proj1 bash
-#结束容器
+
+#进入act_a1虚拟环境,接着执行作业中python命令，完成实验
+conda activate a1
+
+#结束容器(结束与否都不影响实验，只是为省点资源)
 docker-compose down
 ```
 #### PS:如果想不进入容器完成实验，可在docker-compose.yml文件中添加对应的command
