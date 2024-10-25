@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  sl_proj1:
+    image: registry.cn-hangzhou.aliyuncs.com/tyeesl/act_galaxea_a1:v1.1
+    container_name: sl_proj1
+      
+    stdin_open: true
+    tty: true
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu] 
+
+    volumes:
+      - ../act_galaxea_a1:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/dri:/dev/dri
+
+    environment:
+      - DISPLAY=$DISPLAY
+      - GDK_SCALE
+      - GDK_DPI_SCALE
+      - XAUTHORITY
+
+    privileged: true
+    group_add:
+      - video
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/dri:/dev/dri
