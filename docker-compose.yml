@@ -20,7 +20,7 @@ services:
       - /dev/dri:/dev/dri
 
     environment:
-      - DISPLAY=$DISPLAY
+      - DISPLAY=${DISPLAY}
       - GDK_SCALE
       - GDK_DPI_SCALE
       - XAUTHORITY
@@ -31,3 +31,5 @@ services:
     devices:
       - /dev/bus/usb:/dev/bus/usb
       - /dev/dri:/dev/dri
+    network_mode: "host"
+    ipc: "host"
